@@ -5,7 +5,6 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Menu,
   Container,
   List,
   ListItem,
@@ -29,7 +28,6 @@ const navItems = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
