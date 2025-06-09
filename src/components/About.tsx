@@ -51,9 +51,7 @@ const About = () => {
                 problems.
               </Typography>
               <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-                Beyond coding, I'm actively involved in the Pakistani Student Association, where I help organize
-                cultural events and build community among students. I'm always eager to learn new technologies and
-                take on challenging projects that push my boundaries.
+              Beyond coding, I stay active through regular workouts and pickup basketball, and I'm always motivated to explore new technologies and take on challenges that push my boundaries.
               </Typography>
             </Box>
             <Box>
