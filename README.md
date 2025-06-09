@@ -12,6 +12,10 @@ A modern, responsive personal portfolio website built with React and Material-UI
 - Interactive project cards with technology tags
 - Social media links and contact information
 
+## Live Demo
+
+Check out the live version of the portfolio: [https://haidera-portfolio.netlify.app/](https://haidera-portfolio.netlify.app/)
+
 ## Technologies Used
 
 - React
