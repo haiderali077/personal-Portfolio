@@ -4,6 +4,19 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
+    title: 'AllocAid — TA Allocation System',
+    role: 'Software Developer – UBCO Capstone Project',
+    location: 'Kelowna, British Columbia',
+    date: 'May 2025 – August 2025',
+    description: [
+      'Developed responsive React front-end components with TypeScript and Tailwind for the student and admin dashboards',
+      'Built RESTful APIs in Deno/Oak with JWT authentication and PostgreSQL integration for secure data management',
+      'Implemented features like notification pagination, application deadlines, and accessibility improvements',
+      'Collaborated with a 7-member team using GitHub flow, Docker Compose, and CI/CD for integration and deployment consistency',
+    ],
+   
+  },
+  {
     title: 'TSKFLO – Team Task Management System',
     role: 'Team Member – Course Project',
     location: 'Kelowna, British Columbia',
