@@ -34,7 +34,7 @@ const Skills = () => {
     <Box
       id="skills"
       sx={{
-        py: 8,
+        py: { xs: 8, md: 12 },
         bgcolor: 'background.default',
       }}
     >
@@ -49,7 +49,7 @@ const Skills = () => {
             variant="h2"
             sx={{
               color: 'text.primary',
-              mb: 4,
+              mb: 6,
               textAlign: 'center',
             }}
           >
@@ -67,49 +67,72 @@ const Skills = () => {
             }}
           >
             {skillCategories.map((category, index) => (
-              <Paper
+              <motion.div
                 key={index}
-                elevation={3}
-                sx={{
-                  p: 3,
-                  height: '100%',
-                  bgcolor: 'background.paper',
-                  transition: 'transform 0.2s',
-                  '&:hover': {
-                    transform: 'translateY(-5px)',
-                  },
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                viewport={{ once: true }}
               >
-                <Typography
-                  variant="h6"
+                <Paper
+                  elevation={0}
                   sx={{
-                    color: 'primary.main',
-                    mb: 2,
-                    borderBottom: '2px solid',
-                    borderColor: 'primary.main',
-                    pb: 1,
+                    p: 3,
+                    height: '100%',
+                    bgcolor: 'background.paper',
+                    border: '1px solid',
+                    borderColor: '#334155',
+                    borderRadius: 3,
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.25)',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    '&:hover': {
+                      transform: 'scale(1.02)',
+                      boxShadow: '0 8px 40px rgba(59, 130, 246, 0.12)',
+                      borderColor: '#3B82F6',
+                    },
                   }}
                 >
-                  {category.title}
-                </Typography>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {category.skills.map((skill, idx) => (
-                    <Typography
-                      key={idx}
-                      variant="body2"
-                      sx={{
-                        color: 'text.secondary',
-                        bgcolor: 'background.default',
-                        px: 1.5,
-                        py: 0.5,
-                        borderRadius: 1,
-                      }}
-                    >
-                      {skill}
-                    </Typography>
-                  ))}
-                </Box>
-              </Paper>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: 'primary.main',
+                      mb: 2,
+                      pb: 1,
+                      borderBottom: '2px solid',
+                      borderColor: '#334155',
+                      fontSize: '1rem',
+                    }}
+                  >
+                    {category.title}
+                  </Typography>
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75 }}>
+                    {category.skills.map((skill, idx) => (
+                      <Box
+                        key={idx}
+                        sx={{
+                          color: 'text.secondary',
+                          bgcolor: 'rgba(51, 65, 85, 0.5)',
+                          border: '1px solid',
+                          borderColor: '#334155',
+                          px: 1.5,
+                          py: 0.5,
+                          borderRadius: 1.5,
+                          fontSize: '0.8rem',
+                          fontWeight: 500,
+                          transition: 'all 0.2s',
+                          '&:hover': {
+                            bgcolor: 'rgba(59, 130, 246, 0.15)',
+                            color: 'primary.main',
+                            borderColor: '#3B82F6',
+                          },
+                        }}
+                      >
+                        {skill}
+                      </Box>
+                    ))}
+                  </Box>
+                </Paper>
+              </motion.div>
             ))}
           </Box>
         </motion.div>

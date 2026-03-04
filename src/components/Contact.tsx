@@ -11,7 +11,7 @@ const Contact = () => {
     <Box
       id="contact"
       sx={{
-        py: 8,
+        py: { xs: 8, md: 12 },
         bgcolor: 'background.paper',
       }}
     >
@@ -26,7 +26,7 @@ const Contact = () => {
             variant="h2"
             sx={{
               color: 'text.primary',
-              mb: 4,
+              mb: 6,
               textAlign: 'center',
             }}
           >
@@ -63,7 +63,11 @@ const Contact = () => {
                       alignItems: 'center',
                       color: 'text.secondary',
                       textDecoration: 'none',
-                      '&:hover': { color: 'primary.main' },
+                      px: 2,
+                      py: 1,
+                      borderRadius: 2,
+                      transition: 'all 0.2s',
+                      '&:hover': { color: 'primary.main', bgcolor: 'rgba(51, 65, 85, 0.5)' },
                     }}
                   >
                     <EmailIcon sx={{ mr: 1 }} />
@@ -76,25 +80,37 @@ const Contact = () => {
                       alignItems: 'center',
                       color: 'text.secondary',
                       textDecoration: 'none',
-                      '&:hover': { color: 'primary.main' },
+                      px: 2,
+                      py: 1,
+                      borderRadius: 2,
+                      transition: 'all 0.2s',
+                      '&:hover': { color: 'primary.main', bgcolor: 'rgba(51, 65, 85, 0.5)' },
                     }}
                   >
                     <PhoneIcon sx={{ mr: 1 }} />
                     <Typography>(778)-389-7887</Typography>
                   </Link>
                 </Box>
-                <Box sx={{ display: 'flex', gap: 2 }}>
+                <Box sx={{ display: 'flex', gap: 1 }}>
                   <IconButton
                     href="https://github.com/haiderali077"
                     target="_blank"
-                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                    sx={{
+                      color: 'text.secondary',
+                      transition: 'all 0.2s',
+                      '&:hover': { color: 'primary.main', bgcolor: 'rgba(51, 65, 85, 0.5)' },
+                    }}
                   >
                     <GitHubIcon />
                   </IconButton>
                   <IconButton
                     href="https://www.linkedin.com/in/haider-ali-398a59274/"
                     target="_blank"
-                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                    sx={{
+                      color: 'text.secondary',
+                      transition: 'all 0.2s',
+                      '&:hover': { color: 'primary.main', bgcolor: 'rgba(51, 65, 85, 0.5)' },
+                    }}
                   >
                     <LinkedInIcon />
                   </IconButton>

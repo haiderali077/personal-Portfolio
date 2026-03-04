@@ -7,7 +7,7 @@ const About = () => {
     <Box
       id="about"
       sx={{
-        py: 8,
+        py: { xs: 8, md: 12 },
         bgcolor: 'background.paper',
       }}
     >
@@ -22,7 +22,7 @@ const About = () => {
             variant="h2"
             sx={{
               color: 'text.primary',
-              mb: 4,
+              mb: 6,
               textAlign: 'center',
             }}
           >
@@ -56,11 +56,15 @@ const About = () => {
             </Box>
             <Box>
               <Paper
-                elevation={3}
+                elevation={0}
                 sx={{
                   p: 3,
                   bgcolor: 'background.default',
                   height: '100%',
+                  border: '1px solid',
+                  borderColor: '#334155',
+                  borderRadius: 3,
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.25)',
                 }}
               >
                 <Typography variant="h6" sx={{ color: 'primary.main', mb: 2 }}>

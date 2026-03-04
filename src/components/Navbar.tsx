@@ -54,19 +54,34 @@ const Navbar = () => {
   );
 
   return (
-    <AppBar position="fixed" sx={{ bgcolor: 'background.paper' }}>
+    <AppBar
+      position="fixed"
+      sx={{
+        bgcolor: 'rgba(15, 23, 42, 0.85)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid',
+        borderColor: '#334155',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
+      }}
+    >
       <Container maxWidth="lg">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ minHeight: { xs: 56, md: 64 } }}>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              fontWeight: 700,
+              color: 'primary.main',
+              letterSpacing: '-0.02em',
+            }}
           >
             Portfolio
           </Typography>
 
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 0.5 }}>
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -77,9 +92,17 @@ const Navbar = () => {
               >
                 <Typography
                   sx={{
-                    mx: 2,
+                    px: 1.5,
+                    py: 0.75,
                     cursor: 'pointer',
-                    '&:hover': { color: 'primary.main' },
+                    fontSize: '0.9rem',
+                    fontWeight: 500,
+                    borderRadius: 2,
+                    transition: 'all 0.2s',
+                    '&:hover': {
+                      color: 'primary.main',
+                      bgcolor: 'rgba(51, 65, 85, 0.5)',
+                    },
                   }}
                 >
                   {item.name}

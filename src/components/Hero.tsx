@@ -25,6 +25,8 @@ const Hero = () => {
               color: 'primary.main',
               mb: 2,
               fontFamily: 'monospace',
+              fontWeight: 500,
+              fontSize: '1rem',
             }}
           >
             Hi, my name is
@@ -34,7 +36,8 @@ const Hero = () => {
             sx={{
               color: 'text.primary',
               mb: 2,
-              fontWeight: 'bold',
+              fontWeight: 800,
+              fontSize: { xs: '2.5rem', md: '3.5rem' },
             }}
           >
             Haider Ali.
@@ -44,7 +47,8 @@ const Hero = () => {
             sx={{
               color: 'text.secondary',
               mb: 4,
-              fontWeight: 'bold',
+              fontWeight: 700,
+              fontSize: { xs: '1.8rem', md: '2.5rem' },
             }}
           >
             I build things for the web.
@@ -55,6 +59,8 @@ const Hero = () => {
               color: 'text.secondary',
               maxWidth: '600px',
               mb: 4,
+              fontSize: '1.05rem',
+              lineHeight: 1.8,
             }}
           >
             I'm a Computer Science student at the University of British Columbia, passionate about full-stack development
